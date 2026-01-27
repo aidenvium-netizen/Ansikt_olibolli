@@ -7,14 +7,43 @@
 </head>
 <body>
     <!--Aiden-->
+<h1>Ansikt sur</h1>
+    <Section id="ansikt-sur"> 
+        <img src="img/last ned (12).jpg" alt="">
+        <img src="img/last ned (13).jpg" alt="">
+    </Section>
 
+    <div id="button-container">
+        <button onclick="showImage(0)">Sprøtt ansikt</button>
+        <button onclick="showImage(1)">Sint ansikt</button>
+    </div>
 
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('#ansikt-sur img');
 
+        function showImage(index) {
+            images.forEach(img => img.style.display = 'none');
+            images[index].style.display = 'block';
+            currentImageIndex = index;
+        }
+        
+        images.forEach((img, index) => {
+            img.style.display = index === 0 ? 'block' : 'none';
+        });
+    </script>
 
+    <style>
+        #ansikt-sur img {
+            width: 300px;
+            height: auto;
+        }
+        
+        #button-container button {
+            margin: 5px;
+            padding: 8px 16px;
+        }
+    </style>
 
-    
     <!--Oliver-->
-
-
-</body>
 </html>
